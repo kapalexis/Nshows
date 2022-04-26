@@ -1,5 +1,5 @@
 <template>
-  <header class="w-screen h-20 bg-slate-800 flex justify-between items-center text-4xl px-4 shadow-xl">
+  <header class="w-full fixed h-20 bg-slate-800 flex justify-between items-center text-4xl px-4 shadow-xl ">
     <div class="flex gap-8">
       <dashboardHeaderLogo />
       <dashboardHeaderSearch />
