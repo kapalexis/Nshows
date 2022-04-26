@@ -1,10 +1,9 @@
 <template>
-  <div>
-    slider
-  </div>
+  <div>test</div>
 </template>
 
 <script>
+
 export default {
 
 }
