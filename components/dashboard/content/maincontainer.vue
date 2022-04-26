@@ -11,6 +11,12 @@
       Retrouvez les meilleurs films du moment
     </p>
 
+    <div>
+      <dashboardContentNowShowList />
+      <dashboardContentFilmsShortList />
+      <dashboardContentSeriesShortList />
+    </div>
+
     <p>
       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae repellendus ratione eligendi cumque dicta nulla totam libero, eaque obcaecati natus quis tenetur cum rem doloremque recusandae fuga eius atque suscipit.
       Illo voluptatum deserunt quaerat commodi iusto quod, inventore repudiandae voluptatem modi reprehenderit eligendi. Aperiam deleniti quaerat vel vitae provident dolorum iusto, praesentium at suscipit laboriosam doloribus, id corporis hic facilis!
