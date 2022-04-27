@@ -1,5 +1,5 @@
 <template>
-  <div class="font-display">
+  <div class="font-display bg-slate-600">
     <dashboardHeader />
     <dashboardContentMaincontainer />
     <dashboardSidebar />

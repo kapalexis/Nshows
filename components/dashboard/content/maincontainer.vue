@@ -1,10 +1,10 @@
 <template>
   <div
-    class="w-[calc(100%_-_5rem)] min-h-screen ml-20 z-1
-    p-8 pt-24 bg-slate-600 text-white
+    class="w-screen sm:w-[calc(100%_-_5rem)] min-h-screen sm:ml-20 z-1
+    p-8 pt-24  text-white transition-all
   "
   >
-    <div>
+    <div class="">
       <dashboardContentNowShowList />
       <dashboardContentFilmsShortList />
       <dashboardContentSeriesShortList />
