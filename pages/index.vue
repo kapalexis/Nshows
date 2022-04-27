@@ -12,6 +12,8 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-
+<style lang="scss">
+*{
+  transition: all 1s ease-out;
+}
 </style>
