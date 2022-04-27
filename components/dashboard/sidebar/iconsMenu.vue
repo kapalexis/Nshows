@@ -1,7 +1,7 @@
 <template>
-  <div class="h-full flex flex-col justify-between items-center">
+  <div class="h-full w-full flex flex-col justify-between items-start">
     <div
-      class="flex flex-col justify-start items-center py-4 gap-4"
+      class="w-full flex flex-col justify-start items-start py-4 gap-4"
     >
       <dashboardSidebarIconsMenuItems linked-to="/">
         <svg
@@ -68,6 +68,7 @@
 </template>
 
 <script>
+import { mapGetters, mapMutations } from 'vuex'
 export default {
 
 }

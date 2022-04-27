@@ -1,5 +1,10 @@
 <template>
-  <div class="hidden sm:block h-[calc(100vh_-_5em)] z-0 fixed top-20 left-0 w-20 bg-slate-500 shadow-xl">
+  <div
+    class="hidden h-[calc(100vh_-_5em)] z-0 fixed top-20 left-0   bg-slate-500 shadow-xl transition-all sm:flex drawer"
+    :class="{'toggle': drawer}"
+    @mouseover="toggle"
+    @mouseout="toggle"
+  >
     <!-- Icons -->
     <dashboardSidebarIconsMenu />
   </div>
@@ -7,10 +12,27 @@
 
 <script>
 export default {
-
+  data () {
+    return {
+      drawer: false
+    }
+  },
+  methods: {
+    toggle () {
+      this.drawer = !this.drawer
+      this.$store.commit('drawerOpen')
+    }
+  }
 }
 </script>
 
 <style lang="scss" scoped>
+.drawer{
+  width:4em;
 
+}
+.toggle{
+  width:10em;
+  transition: width 0.2s ease-out;
+}
 </style>
