@@ -1,6 +1,6 @@
 <template>
   <div
-    class="w-[calc(100%_-_5rem)] ml-20 z-1
+    class="w-[calc(100%_-_5rem)] min-h-screen ml-20 z-1
     p-8 pt-24 bg-slate-600 text-white
   "
   >
