@@ -13,7 +13,5 @@ export default {
 </script>
 
 <style lang="scss">
-*{
-  transition: all 1s ease-out;
-}
+
 </style>
