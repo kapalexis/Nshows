@@ -1,7 +1,7 @@
 <template>
   <div
     class="mb-16 grid grid-cols-1
-  sm:grid-cols-2 gap-16
+  sm:grid-cols-2 gap-4 sm:gap-16
   lg:grid-cols-3
   xl:grid-cols-4"
   >

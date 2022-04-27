@@ -1,7 +1,7 @@
 <template>
   <router-link to="#">
-    <div class="w-32 flex gap-2 items-center justify-end text-white border-l-[1px] border-[#ffffff20]">
-      <div class="flex flex-col items-end">
+    <div class="sm:w-32 flex gap-2 items-center justify-end text-white sm:border-l-[1px] border-[#ffffff20] pl-2">
+      <div class="hidden sm:flex flex-col items-end">
         <h3 class="text-xs opacity-40">
           Hello
         </h3>
