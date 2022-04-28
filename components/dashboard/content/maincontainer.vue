@@ -5,7 +5,10 @@
   "
     :class="{'sm:ml-40 sm:w-[calc(100%_-_10rem)]': $store.state.drawerOpen}"
   >
-    <div class="">
+    <div v-if="$route.params.id">
+      <dashboardContentShowDetails />
+    </div>
+    <div v-else class="">
       <dashboardContentNowShowList />
       <dashboardContentFilmsShortList />
       <dashboardContentSeriesShortList />
@@ -14,8 +17,9 @@
 </template>
 
 <script>
+import Dashboard from '../dashboard.vue'
 export default {
-
+  components: { Dashboard }
 }
 </script>
 
