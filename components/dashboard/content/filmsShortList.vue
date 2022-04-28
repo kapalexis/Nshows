@@ -1,22 +1,29 @@
 <template>
   <div>
     <div
-      class="mb-16 grid grid-cols-1
-    sm:grid-cols-2 gap-4 sm:gap-8
-    lg:grid-cols-3
-    xl:grid-cols-4"
+      class="
+    grid-rows-1
+    w-full mb-16
+    grid
+    grid-cols-2
+    gap-4
+
+    sm:grid-cols-2
+    md:grid-cols-3
+    lg:grid-cols-4
+    2xl:grid-cols-6"
     >
       <NuxtLink
         v-for="(film, index) in filmsSliced"
         :key="film.id"
         :to="'/' + film.id"
-        class="flex flex-col items-center mb-4 anim-float transition-all grow"
+        class=" flex flex-col items-center mb-4 anim-float transition-all grow"
       >
-        <div class="relative w-64 mb-2">
+        <div class=" justify-start relative  mb-2">
           <img class="rounded" :src="`https://image.tmdb.org/t/p/w500/${film.poster_path}`" alt="">
           <span class="absolute top-0 right-0 rounded-full bg-green-400 p-1 m-2 text-xs text-slate-800">{{ film.vote_average }}</span>
         </div>
-        <div class="w-64 flex flex-col items-start ">
+        <div class="w-full flex flex-col items-start ">
           <p class="text-xs text-gray-300">
             {{ film.release_date.slice(0,4) }} - Science-fiction
           </p>
@@ -43,7 +50,7 @@ export default {
   },
   computed: {
     filmsSliced () {
-      return this.films.slice(0, 4)
+      return this.films.slice(0, 6)
     }
 
   },
