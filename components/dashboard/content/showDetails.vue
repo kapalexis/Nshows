@@ -7,7 +7,7 @@
       <!-- left side -->
       <div class="w-full sm:w-1/3 flex flex-col gap-4">
         <img class=" rounded" :src="`https://image.tmdb.org/t/p/w500/${showDetails.poster_path}`" alt="">
-        <input type="button" value="Voir la bande annonce" class="anim-float bg-green-400 text-slate-800 rounded p-2">
+        <input type="button" value="Voir la bande annonce" class="anim-float bg-slate-800  rounded p-2">
       </div>
       <!-- END left side -->
 
