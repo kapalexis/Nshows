@@ -69,7 +69,4 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.anim-float:hover{
-    margin-top: -5px;
-}
 </style>
