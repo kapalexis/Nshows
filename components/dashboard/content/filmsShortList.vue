@@ -2,25 +2,24 @@
   <div>
     <div
       class="
+
     grid-rows-1
     w-full mb-16
     grid
     grid-cols-2
     gap-4
-
     sm:grid-cols-2
     md:grid-cols-3
-    lg:grid-cols-4
-    2xl:grid-cols-6"
+    xl:grid-cols-6"
     >
       <NuxtLink
         v-for="(film, index) in filmsSliced"
         :key="film.id"
         :to="'/' + film.id"
-        class=" flex flex-col items-center mb-4 anim-float transition-all grow"
+        class=" flex flex-col items-center mb-4 transition-all"
       >
-        <div class=" justify-start relative  mb-2">
-          <img class="rounded" :src="`https://image.tmdb.org/t/p/w500/${film.poster_path}`" alt="">
+        <div class="justify-start h-full anim-float  relative mb-2">
+          <img class="rounded h-full object-cover" :src="`https://image.tmdb.org/t/p/w500/${film.poster_path}`" alt="">
           <span class="absolute top-0 right-0 rounded-full bg-green-400 p-1 m-2 text-xs text-slate-800">{{ film.vote_average }}</span>
         </div>
         <div class="w-full flex flex-col items-start ">
@@ -76,4 +75,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.anim-float:hover{
+    margin:-5px;
+    transition: margin 0.25s;
+}
 </style>

@@ -1,28 +1,36 @@
 <template>
-  <div class="flex flex-col gap-8">
+  <div class="max-w-[1280px] flex flex-col gap-8">
     <NuxtLink class="w-fit" to="/">
       <input class="anim-float cursor-pointer bg-green-400 text-slate-800 p-2 rounded" type="button" value="Retour">
     </NuxtLink>
-    <div class="flex gap-8">
-      <div>
-        <img class="w-fit h-fit rounded" :src="`https://image.tmdb.org/t/p/w500/${showDetails.poster_path}`" alt="">
+    <div class="flex flex-col sm:flex-row gap-8">
+      <!-- left side -->
+      <div class="w-full sm:w-1/3 flex flex-col gap-4">
+        <img class=" rounded" :src="`https://image.tmdb.org/t/p/w500/${showDetails.poster_path}`" alt="">
+        <input type="button" value="Voir la bande annonce" class="anim-float bg-green-400 text-slate-800 rounded p-2">
       </div>
-      <div class="flex flex-col gap-2">
-        <h2 class="text-[3em]">
-          {{ showDetails.title }}
-        </h2>
-        <div class="flex gap-4">
-          <span class="bg-green-100 w-fit p-1 text-slate-800 text-xs rounded">
-            {{ showDetails.release_date }}
-          </span>
-          <span class="bg-green-100 w-fit p-1 text-slate-800 text-xs rounded">
-            {{ showDetails.release_date }}
-          </span>
-          <span class="bg-green-100 w-fit p-1 text-slate-800 text-xs rounded">
-            {{ showDetails.runtime }} min
-          </span>
+      <!-- END left side -->
+
+      <!-- right side -->
+      <div class="flex flex-col w-full sm:w-2/3 p-4">
+        <div class="">
+          <h2 class="text-[3em]">
+            {{ showDetails.title }}
+          </h2>
+          <div class="flex gap-4">
+            <dashboardContentShowDetailsBadges :date="showDetails.release_date" />
+            <dashboardContentShowDetailsBadges :time="showDetails.runtime" />
+          </div>
+          <div class="flex gap-4 my-4">
+            <img src="@/assets/IMDB_Logo_2016.svg" class="w-12" alt="imdb logo">
+            <p><span class="font-bold text-2xl">{{ showDetails.vote_average }}</span>/10</p>
+          </div>
         </div>
+        <p class="text-justify">
+          {{ showDetails.overview }}
+        </p>
       </div>
+      <!-- END right side -->
     </div>
   </div>
 </template>
