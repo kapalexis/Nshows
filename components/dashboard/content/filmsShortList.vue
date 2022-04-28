@@ -6,9 +6,10 @@
     lg:grid-cols-3
     xl:grid-cols-4"
     >
-      <div
-        v-for="(film, index) in films.slice(0,8)"
-        :key="index"
+      <NuxtLink
+        v-for="(film, index) in filmsSliced"
+        :key="film.id"
+        :to="'/' + film.id"
         class="flex flex-col items-center mb-4 anim-float transition-all grow"
       >
         <div class="relative w-64 mb-2">
@@ -23,7 +24,7 @@
             {{ film.title }}
           </h3>
         </div>
-      </div>
+      </NuxtLink>
     </div>
   </div>
 </template>
@@ -40,8 +41,15 @@ export default {
       films: []
     }
   },
+  computed: {
+    filmsSliced () {
+      return this.films.slice(0, 4)
+    }
+
+  },
   mounted () {
     this.getFilms()
+    console.log(this.films)
   },
   methods: {
     async getFilms () {
@@ -50,8 +58,9 @@ export default {
       // console.log(result)
       result.data.results.forEach((film) => {
         this.films.push(film)
+        // console.log(film)
       })
-      console.log(this.films)
+      // console.log(this.films)
     }
   }
 }

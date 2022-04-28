@@ -1,16 +1,9 @@
 <template>
-  <div>
-    {{ id }}
-  </div>
+  <dashboard />
 </template>
 
 <script>
 export default {
-  data () {
-    return {
-      id: this.$route.params.id
-    }
-  }
 
 }
 </script>

@@ -1,14 +1,9 @@
 <template>
-  <div class="font-display bg-slate-600">
-    <dashboardHeader />
-    <dashboardContentMaincontainer />
-    <dashboardSidebar />
-  </div>
+  <dashboard />
 </template>
 
 <script>
 export default {
-
 }
 </script>
 
