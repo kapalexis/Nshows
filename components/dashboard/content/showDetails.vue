@@ -19,7 +19,14 @@
           </h2>
           <div class="flex gap-4">
             <span class="badge">
-              {{ showDetails.release_date }}
+              {{
+                new Date(showDetails.release_date).toLocaleString('fr-fr', {
+                  month: 'long',
+                  day: 'numeric',
+                  year: 'numeric',
+                })
+              }}
+
             </span>
             <span class="badge">
               {{ showDetails.runtime }} min
