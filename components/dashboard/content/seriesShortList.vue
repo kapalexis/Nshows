@@ -28,10 +28,10 @@
         </div>
         <div class="w-full flex flex-col items-start ">
           <p class="text-xs text-gray-300">
-            <!-- {{ film.release_date.slice(0,4) }} -->
+            {{ serie.first_air_date.slice(0,4) }}
           </p>
           <h3 class="text-sm">
-            {{ serie.title }}
+            {{ serie.name }}
           </h3>
         </div>
       </NuxtLink>

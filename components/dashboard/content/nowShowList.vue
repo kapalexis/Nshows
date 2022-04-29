@@ -62,7 +62,7 @@ export default {
   },
   mounted () {
     this.getPopularFilms()
-    console.log(this.popularFilms)
+    //console.log(this.popularFilms)
   },
   methods: {
     async getPopularFilms () {
@@ -71,7 +71,7 @@ export default {
       // console.log('pop', result.data.results)
       result.data.results.forEach((film) => {
         this.popularFilms.push(film)
-        console.log('popfilms', film)
+        // console.log('popfilms', film)
       })
       // console.log(this.films)
     }

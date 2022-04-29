@@ -28,7 +28,7 @@
         </div>
         <div class="w-full flex flex-col items-start ">
           <p class="text-xs text-gray-300">
-            {{ film.release_date }}
+            {{ film.release_date.slice(0,4) }}
           </p>
           <h3 class="text-sm">
             {{ film.title }}
@@ -58,17 +58,17 @@ export default {
   },
   mounted () {
     this.getFilms()
-    console.log(this.latestsFilms)
+    // console.log(this.latestsFilms)
   },
   methods: {
     async getFilms () {
-      const data = axios.get('https://api.themoviedb.org/3/trending/all/week?api_key=ad7399fec8dfdb5f2a5a29d4d3c11e0d&language=fr-FR')
+      const data = axios.get('https://api.themoviedb.org/3/trending/movie/week?api_key=ad7399fec8dfdb5f2a5a29d4d3c11e0d&language=fr-FR')
 
       const result = await data
       // console.log(result)
       result.data.results.forEach((film) => {
         this.latestsFilms.push(film)
-        console.log('trend', film)
+        // console.log('trend', film)
       })
       // console.log(this.films)
     }

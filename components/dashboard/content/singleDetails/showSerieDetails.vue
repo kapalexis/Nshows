@@ -15,7 +15,7 @@
       <div class="flex flex-col w-full sm:w-2/3 p-1 sm:p-4">
         <div class="">
           <h2 class="text-[3em]">
-            {{ showDetails.title }}
+            {{ showDetails.name }}
           </h2>
           <div class="flex gap-4 flex-wrap">
             <span class="badge">
@@ -72,7 +72,7 @@ export default {
   },
   methods: {
     async getShowDetails () {
-      const data = axios.get(`https://api.themoviedb.org/3/movie/${this.$route.params.id}?api_key=ad7399fec8dfdb5f2a5a29d4d3c11e0d&language=fr-FR&append_to_response=videos,credits`)
+      const data = axios.get(`https://api.themoviedb.org/3/tv/${this.$route.params.id}?api_key=ad7399fec8dfdb5f2a5a29d4d3c11e0d&language=fr-FR&append_to_response=video,credits`)
       const result = await data
       this.showDetails = result.data
       console.log(this.showDetails)
