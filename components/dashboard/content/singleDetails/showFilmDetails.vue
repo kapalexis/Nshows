@@ -75,7 +75,7 @@ export default {
       const data = axios.get(`https://api.themoviedb.org/3/movie/${this.$route.params.id}?api_key=ad7399fec8dfdb5f2a5a29d4d3c11e0d&language=fr-FR&append_to_response=videos,credits`)
       const result = await data
       this.showDetails = result.data
-      console.log(this.showDetails)
+      // console.log(this.showDetails)
     }
   }
 }

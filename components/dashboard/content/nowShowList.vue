@@ -62,7 +62,7 @@ export default {
   },
   mounted () {
     this.getPopularFilms()
-    //console.log(this.popularFilms)
+    // console.log(this.popularFilms)
   },
   methods: {
     async getPopularFilms () {

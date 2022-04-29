@@ -59,7 +59,7 @@ export default {
   },
   mounted () {
     this.getSeries()
-    console.log(this.series)
+    // console.log(this.series)
   },
   methods: {
     async getSeries () {
