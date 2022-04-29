@@ -28,5 +28,9 @@
 }
 
 .menu-icons{
-    @apply flex flex-col flex-wrap justify-center p-2 pl-4 gap-6 h-14 w-14 border-l-2 border-transparent text-gray-300 hover:text-green-400 hover:border-l-2 hover:border-green-400 transition-all
+    @apply flex flex-col flex-wrap justify-center p-2 pl-4 gap-6 h-14 w-14 border-l-2 border-transparent text-gray-300 hover:text-green-400 hover:border-l-2 hover:border-green-400 transition-all;
+
+    p{
+        @apply h-full w-fit flex items-center
+    }
 }
