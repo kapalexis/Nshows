@@ -19,3 +19,10 @@
 .badge{
     @apply bg-green-100 w-fit p-1 px-2 text-slate-800 text-xs rounded
   }
+
+  .btn{
+      @apply anim-float cursor-pointer bg-green-400 text-slate-800 p-2 px-8 rounded
+  }
+  .btn-no-float{
+    @apply cursor-pointer bg-green-400 text-slate-800 p-2 px-8 rounded hover:bg-slate-800 hover:text-white
+}

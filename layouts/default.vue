@@ -1,5 +1,5 @@
 <template>
-  <div class="app">
+  <div class="app bg-slate-600">
     <Nuxt keep-alive />
   </div>
 </template>

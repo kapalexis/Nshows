@@ -1,5 +1,10 @@
 <template>
   <div>
+    <div>
+      <h2 class="text-2xl font-bold uppercase mb-4">
+        Les films du moment (trends)
+      </h2>
+    </div>
     <div
       class="
     grid-rows-1
@@ -12,9 +17,9 @@
     xl:grid-cols-6"
     >
       <NuxtLink
-        v-for="(film, index) in filmsSliced"
+        v-for="(film, index) in latestsFilmsSlided"
         :key="film.id"
-        :to="'/' + film.id"
+        :to="'/films/' + film.id"
         class=" flex flex-col items-center mb-4 transition-all"
       >
         <div class="justify-start h-full anim-float  relative mb-2">
@@ -23,7 +28,7 @@
         </div>
         <div class="w-full flex flex-col items-start ">
           <p class="text-xs text-gray-300">
-            {{ film.release_date.slice(0,4) }} - Science-fiction
+            {{ film.release_date }}
           </p>
           <h3 class="text-sm">
             {{ film.title }}
@@ -43,27 +48,27 @@ export default {
   },
   data () {
     return {
-      films: []
+      latestsFilms: []
     }
   },
   computed: {
-    filmsSliced () {
-      return this.films.slice(0, 6)
+    latestsFilmsSlided () {
+      return this.latestsFilms.slice(0, 6)
     }
-
   },
   mounted () {
     this.getFilms()
-    console.log(this.films)
+    console.log(this.latestsFilms)
   },
   methods: {
     async getFilms () {
-      const data = axios.get('https://api.themoviedb.org/3/trending/movie/week?api_key=ad7399fec8dfdb5f2a5a29d4d3c11e0d&language=fr-FR')
+      const data = axios.get('https://api.themoviedb.org/3/trending/all/week?api_key=ad7399fec8dfdb5f2a5a29d4d3c11e0d&language=fr-FR')
+
       const result = await data
       // console.log(result)
       result.data.results.forEach((film) => {
-        this.films.push(film)
-        // console.log(film)
+        this.latestsFilms.push(film)
+        console.log('trend', film)
       })
       // console.log(this.films)
     }

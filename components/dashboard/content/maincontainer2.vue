@@ -6,11 +6,8 @@
   "
     :class="{'sm:ml-40 sm:w-[calc(100%_-_10rem)]': $store.state.drawerOpen}"
   >
-    <div v-if="$route.path.split('/').includes('films')" class="maincontainer">
-      <dashboardContentSingleDetailsShowFilmDetails />
-    </div>
-    <div v-else-if="$route.path.split('/').includes('series')" class="maincontainer">
-      <dashboardContentSingleDetailsShowSerieDetails />
+    <div v-if="$route.params.id" class="maincontainer">
+      <dashboardContentShowDetails />
     </div>
     <div v-else class="">
       <dashboardContentNowShowList />
@@ -22,16 +19,5 @@
 
 <script>
 export default {
-
-  data () {
-    return {
-      url: []
-    }
-  },
-  methods: {
-    checkPath () {
-      this.url.push($nuxt.$route.path)
-    }
-  }
 }
 </script>
