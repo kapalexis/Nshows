@@ -18,12 +18,24 @@
             {{ showDetails.title }}
           </h2>
           <div class="flex gap-4">
-            <dashboardContentShowDetailsBadges :date="showDetails.release_date" />
-            <dashboardContentShowDetailsBadges :time="showDetails.runtime" />
+            <span class="badge">
+              {{ showDetails.release_date }}
+            </span>
+            <span class="badge">
+              {{ showDetails.runtime }} min
+            </span>
+            <div>
+              <div class="badge">
+                <span v-for="(genre, index) in showDetails.genres" :key="genre.id">
+                  <template v-if="index > 0">, </template>
+                  {{ genre.name }}
+                </span>
+              </div>
+            </div>
           </div>
           <div class="flex gap-4 my-4">
             <img src="@/assets/IMDB_Logo_2016.svg" class="w-12" alt="imdb logo">
-            <p><span class="font-bold text-2xl">{{ showDetails.vote_average }}</span>/10</p>
+            <p><span class="font-bold text-2xl">{{ showDetails.vote_average }}</span>/10 <span class="text-xs">({{ showDetails.vote_count }} votes)</span></p>
           </div>
         </div>
         <p class="text-justify">
@@ -42,13 +54,9 @@ export default {
   data () {
     return {
       showDetails: []
-
     }
   },
   computed: {
-    showDetailsSliced () {
-      return this.showDetails
-    }
 
   },
   mounted () {
@@ -69,3 +77,7 @@ export default {
 
 /* https://api.themoviedb.org/3/trending/movie/week?api_key=ad7399fec8dfdb5f2a5a29d4d3c11e0d */
 </script>
+
+<style>
+
+</style>
