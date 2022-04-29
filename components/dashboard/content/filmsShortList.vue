@@ -2,7 +2,6 @@
   <div>
     <div
       class="
-
     grid-rows-1
     w-full mb-16
     grid
@@ -19,7 +18,7 @@
         class=" flex flex-col items-center mb-4 transition-all"
       >
         <div class="justify-start h-full anim-float  relative mb-2">
-          <img class="rounded h-full object-cover" :src="`https://image.tmdb.org/t/p/w500/${film.poster_path}`" alt="">
+          <img class="rounded h-full max-h-fit object-cover" :src="`https://image.tmdb.org/t/p/w500/${film.poster_path}`" alt="">
           <span class="absolute top-0 right-0 rounded-full bg-green-400 p-1 m-2 text-xs text-slate-800">{{ film.vote_average }}</span>
         </div>
         <div class="w-full flex flex-col items-start ">
