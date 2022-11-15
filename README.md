@@ -1,5 +1,9 @@
 # NShows
 
+Netflify URL : https://kasnmovies.netlify.app/
+
+Project not done
+
 ## Build Setup
 
 ```bash
