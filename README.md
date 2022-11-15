@@ -1,6 +1,6 @@
 # NShows
 
-Netflify URL : https://kasnmovies.netlify.app/
+DEMO URL : https://kasnmovies.netlify.app/
 
 Project not done
 
